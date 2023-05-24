@@ -7,6 +7,16 @@
   <title>ToDo con Socket.io</title>
 </head>
 <body>
-  <h1>App</h1>
+  
+  <form id="noteFrom">
+    <input id="titel" type="text">
+    <textarea id="description" rows="3"></textarea>
+    <button>Send</button>
+  </form>
+
+  <ul id="notes"></ul>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="./main.js" type="module"></script>
 </body>
 </html>
