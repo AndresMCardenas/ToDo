@@ -1,5 +1,5 @@
 // se definen las propiedades que se vana guardar en el modelo y sus tipos de datos
-import { Schema, model } from "mongoose";
+import { Schema, model } from 'mongoose';
 
 const schema = new Schema(
   {
