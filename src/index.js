@@ -5,7 +5,7 @@ import sockets from './sockets';// se importa socket io para realizar la escucha
 
 import { connectDB } from './db';// se importa la coneccion a la BD
 
-
+//se llama la conexion a la base de datos
 connectDB();
 
 const server = http.createServer(app);//se envia la app de expres atravez de creatserver y retorna un servidor

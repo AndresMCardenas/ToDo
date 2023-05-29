@@ -15,7 +15,23 @@ export const saveNote = (title, description) => {
 export const onNewNote = (callback) => {  
   socket.on("server:newnote", callback );
 };
-
+//funcion para capturar el boton eliminar y enviar el id
 export const deleteNote = id => {
   socket.emit("client:deletenote", id);
+};
+//funcion para caturar el boton actualizar y enviar al backend
+export const getNoteById = (id) => {
+  socket.emit("client:getnote", id);
+};
+
+export const onSelected =(callback)=> {
+  socket.on("server:selectednote", callback);
+};
+
+export const updateNote = (id, title, description) => {
+  socket.emit("client:updatenote", {
+    _id: id,
+    title,
+    description,
+  })
 }
