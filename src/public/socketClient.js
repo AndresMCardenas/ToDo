@@ -23,11 +23,11 @@ export const deleteNote = id => {
 export const getNoteById = (id) => {
   socket.emit("client:getnote", id);
 };
-
+//se captura el id de la nota para buscarla en la base de datos
 export const onSelected =(callback)=> {
   socket.on("server:selectednote", callback);
 };
-
+//se envian los datos de la nota a actualziar al backend
 export const updateNote = (id, title, description) => {
   socket.emit("client:updatenote", {
     _id: id,

@@ -22,12 +22,12 @@ export default (io) => {
       await Note.findByIdAndDelete(id);
       emitNotes();
     })
-
+    // se recibe el id de la nota a selecionar y buscar en la base de datos
     socket.on("client:getnote", async id => {
       const note = await Note.findById(id);
       io.emit("server:selectednote", note);
     });
-
+    // se recibe el id de la nota a actualizar en la base
     socket.on ("client:updatenote", async (updateNote) => {
       await Note.findByIdAndUpdate(updateNote._id, {
         title: updateNote.title,
