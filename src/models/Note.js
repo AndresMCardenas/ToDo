@@ -3,7 +3,7 @@ import { Schema, model } from 'mongoose';
 
 const schema = new Schema(
   {
-    titel: {
+    title: {
       type: String,
       required: true,//se hace obligatorio el campo
     },
